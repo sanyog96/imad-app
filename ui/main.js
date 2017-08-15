@@ -13,3 +13,11 @@ function moveRight() {
 img.onclick = function() {
     var interval = setInterval(moveRight, 100);//Every 100 millisecond apply  moveRight function
 };
+
+var button = document.getElementById('counter');
+var counter = 0;
+button.oonclick = function() {
+    counter = counter + 1;
+    var spam = document.getElementById('count');
+    spam.innerHTML = counter.toSttring();
+}
