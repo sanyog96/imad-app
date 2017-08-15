@@ -111,11 +111,10 @@ app.get('/ui/madi.png', function (req, res) {
 var names = [];
 app.get('/submit-name/:name', function (req, res) {
   //set the name from the request
-  var name = res.params.name;
+  var name = req.params.name;
   
   names.push(name);
   //JSON : Javascript Object Notation
-  
   res.send(JSON.stringify(names));
 });
 
