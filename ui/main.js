@@ -19,5 +19,5 @@ var counter = 0;
 button.oonclick = function() {
     counter = counter + 1;
     var spam = document.getElementById('count');
-    spam.innerHTML = counter.toSttring();
+    spam.innerHTML = counter.toString();
 }
