@@ -15,8 +15,7 @@ button.onclick = function() {
 };
 
 //chnage name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit= document.getElementById('submit-btn');
 submit.onclick = function() {
     //should make a request to server and send the name
@@ -37,6 +36,8 @@ submit.onclick = function() {
             }
         }
     };
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     request.open('Get', "http://sanyog96.imad.hasura-app.io/submit-name?name="+name, true);
     request.send(null);
 };
