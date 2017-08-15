@@ -10,6 +10,6 @@ button.onclick = function() {
             }
         }
     };
-    request.open('Get', "http://sanyog96.imad.hasura.app.io/counter", true);
+    request.open('Get', "http://sanyog96.imad.hasura-app.io/counter", true);
     request.send(null);
 };
