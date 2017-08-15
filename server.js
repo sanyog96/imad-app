@@ -10,13 +10,37 @@ var articleOne = {
     heading: 'Articel One',
     date: 'August 15,2017',
     content: `  <p>
+                    This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.
+                </p>
+                <p>
+                    This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.This is the content of my first aricle.
+                </p>`
+};
+
+var articleTwo = {
+    title: 'Article Two : Sanyog Sharma',
+    heading: 'Article Two',
+    date: 'August 15,2017',
+    content: ` <p>
                     This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.
                 </p>
                 <p>
                     This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.This is the content of my Second aricle.
-                </p>`
-}
+                </p> `
+};
 
+
+var articleThree = {
+    title: 'Article Three : Sanyog Sharma',
+    heading: 'Article Three',
+    date: 'August 15,2017',
+    content: ` <p>
+                    This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.
+                </p>
+                <p>
+                    This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.This is the content of my third aricle.
+                </p>`
+};
 function createTemplate (data){
     var title= data.title;
     var date = data.date;
