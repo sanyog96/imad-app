@@ -17,7 +17,7 @@ button.onclick = function() {
 //chnage name
 var nameInput = document.getElementById('name');
 var name = nameInput.value;
-var submit= document.getElementById('submit_btn');
+var submit= document.getElementById('submit-btn');
 submit.onclick = function() {
     //should make a request to server and send the name
     //capture the list of name and render it as a list
@@ -25,7 +25,7 @@ submit.onclick = function() {
     var list = '';
     for(var i=0; i<names.length; i++)
     {
-        list = list + "<li>"+ name[i] + "</li>";
+        list = list + "<li>"+ names[i] + "</li>";
     }
     var ul= document.getElementById('namelist');
     ul.innerHTML = list;
