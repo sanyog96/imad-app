@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var pool = require('pg').Pool;
 var crypto = require('crypto');
+var bodyParser = require('body-parser')
 var config = {
     user: 'sanyog96',
     database: 'sanyog96',
@@ -13,6 +14,7 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
 
 var articles = {
     'article-one' : {
@@ -102,6 +104,21 @@ function hash(input, salt) {
 app.get('/hash/:input', function(req, res) {
     var hashedString = hash(req.params.input, 'This is some random string');
     res.send(hashedString);
+});
+
+app.get('/create-user', function(req, res) {
+    //JSON request
+    var username = req.body.username;
+    var password = req.body.password;
+    var salt = crypto.getRandomBytes(128).toString('hex') ;
+    var dbString = hash(password, salt);
+    pool.query = ("INSERT INTO 'user' (username, password) values($1, $2)", [usename, dbString], function(err, result) {
+     if(err) {
+     res.status(500).send(err.toString());
+     } else {
+         res.send("User successfully created: " + username);
+     }   
+    }); 
 });
 
 app.get('/test-db', function(req, res) {
