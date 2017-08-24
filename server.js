@@ -94,6 +94,7 @@ app.get('/', function (req, res) {
 
 function hash(input, salt) {
     //How do we create a hash
+    //appends the  value of salt to input and apply hash fuction 10000 times to the obtained one
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
     return hashed.toString('hex');
 }
